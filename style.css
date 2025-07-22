@@ -438,6 +438,7 @@ body {
 
 .timeline-content .fa-calendar-days {
     color: var(--bright-blue);
+    font-size: 18px;
 }
 
 .timeline-content h3 {
@@ -486,6 +487,15 @@ body {
     background: linear-gradient(90deg, var(--bright-blue), #06d6a0, var(--button-blue));
     width: 80px;
     transition: all ease-in-out 0.3s;
+}
+
+/* Projects section */
+#projects {
+    color: var(--white);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Media query for tablets and larger mobile devices */
@@ -567,7 +577,8 @@ body {
     /* home section */
     #home {
         display: block;
-        padding: 80px 20px;
+        padding: 30px 20px;
+        margin-top: 30px;
         height: auto;
     }
 
@@ -645,5 +656,9 @@ body {
     .timeline-item {
         padding-left: 30px;
         margin-bottom: 30px;
+    }
+
+    .timeline-content .fa-calendar-days {
+        font-size: 14px;
     }
 }

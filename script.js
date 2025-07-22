@@ -5,7 +5,7 @@ const closeBtn = document.querySelector(".fa-xmark");
 const pages = document.querySelectorAll(".page");
 const items = document.querySelectorAll(".items");
 
-let currentPageIndex = 1;
+let currentPageIndex = 2;
 let isAnimating = false;
 
 function isMobileOrTablet() {
@@ -138,4 +138,44 @@ document.addEventListener("wheel", function (e) {
   } else if (e.deltaY < 0 && currentPageIndex > 0) {
     animateToPage(currentPageIndex - 1);
   }
+});
+
+
+// Slider js
+const swiper = new Swiper('.mySwiper', {
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  centeredSlides: false,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    reverseDirection: false,
+  },
+  speed: 3000,
+  allowTouchMove: true,
+  simulateTouch: true,
+
+  // Responsive breakpoints
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+
+  // Effects
+  effect: 'slide',
+  
+  // Grab cursor
+  grabCursor: true,
 });
