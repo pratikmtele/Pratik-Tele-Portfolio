@@ -177,5 +177,5 @@ const swiper = new Swiper('.mySwiper', {
   effect: 'slide',
   
   // Grab cursor
-  grabCursor: true,
+  grabCursor: false,
 });
