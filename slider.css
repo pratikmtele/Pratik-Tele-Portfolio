@@ -12,7 +12,7 @@
     position: relative;
 }
 
-.slider-container h2 {
+h2 {
     text-align: center;
     font-size: 36px;
     color: white;
@@ -22,7 +22,7 @@
     font-weight: 700;
 }
 
-.slider-container h2::after {
+h2::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -42,7 +42,7 @@
 
 .swiper-wrapper {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .swiper-slide {
@@ -53,6 +53,7 @@
     padding: 20px;
     text-align: center;
     height: auto;
+    max-height: 600px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -194,6 +195,32 @@
     left: 100%;
 }
 
+/* Tech Stack Styles */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-stack span {
+    background: rgba(59,130,246,0.18);
+    color: #fff;
+    font-size: 0.95rem;
+    z-index: 999;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    border: 1px solid rgba(59,130,246,0.25);
+    box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+    backdrop-filter: blur(6px);
+    display: inline-block;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #projects {
@@ -287,6 +314,16 @@
         font-size: 14px;
         flex: 1;
         justify-content: center;
+    }
+    
+    .tech-stack {
+        gap: 7px;
+        margin-bottom: 10px;
+    }
+    .tech-stack span {
+        padding: 4px 10px;
+        font-size: 0.85rem;
+        border-radius: 14px;
     }
 }
 

@@ -5,7 +5,7 @@ const closeBtn = document.querySelector(".fa-xmark");
 const pages = document.querySelectorAll(".page");
 const items = document.querySelectorAll(".items");
 
-let currentPageIndex = 2;
+let currentPageIndex = 3;
 let isAnimating = false;
 
 function isMobileOrTablet() {

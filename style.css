@@ -272,9 +272,6 @@ body {
     transform: translateY(-2px);
     background: rgba(249, 250, 251, 0.15);
     border-color: rgba(249, 250, 251, 0.3);
-    /* box-shadow:
-        0 12px 40px rgba(0, 0, 0, 0.4),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3); */
 }
 
 .social-medias .github-btn:hover::before {
@@ -352,7 +349,7 @@ body {
     width: 100%;
 }
 
-.education-section .education-title {
+h2 {
     font-size: 36px;
     width: min-content;
     position: relative;
@@ -361,7 +358,7 @@ body {
     color: var(--white);
 }
 
-.education-section .education-title::after {
+h2::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -468,27 +465,6 @@ body {
     width: 100%;
 }
 
-.experience-section .experience-title {
-    font-size: 36px;
-    width: min-content;
-    position: relative;
-    margin-bottom: 40px;
-    font-weight: 700;
-    color: var(--white);
-}
-
-.experience-section .experience-title::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    height: 3px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, var(--bright-blue), #06d6a0, var(--button-blue));
-    width: 80px;
-    transition: all ease-in-out 0.3s;
-}
-
 /* Projects section */
 #projects {
     color: var(--white);
@@ -497,6 +473,71 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* Skills section */
+#skills {
+    color: var(--white);
+    padding-top: 100px;
+}
+
+.skills-category {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.skills-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.skills-list .skill {
+    padding: 10px 30px;
+    border: 1px solid rgba(16, 185, 129, 0.12);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-list .skill:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(16, 185, 129, 0.3);
+    transform: translateY(-2px);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.12),
+        inset 0 1px 0 rgba(16, 185, 129, 0.12);
+}
+
+
+
+.skills-list .skill img {
+    width: 50px;
+    height: 50px;
+}
+
+.skills-list .skill span {
+    font-size: 15px;
+    color: #222;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-list .skill:hover span {
+    color: #10b981;
+}
+
 
 /* Media query for tablets and larger mobile devices */
 @media screen and (max-width: 1024px) {
@@ -635,8 +676,7 @@ body {
         padding-top: 80px;
     }
 
-    .education-section .education-title,
-    .experience-section .experience-title {
+    h2 {
         font-size: 28px;
     }
 
